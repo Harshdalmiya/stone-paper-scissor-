@@ -1,0 +1,37 @@
+import random
+def gamewin(comp,you):
+    if(comp==you):
+        return None
+    elif(comp=="s"):
+        if(you=="p"):
+            return True
+        else:
+            return False   
+    elif(comp=="p"):
+        if(you=="sc"):
+            return True
+        else:
+            return False 
+    elif(comp=="sc"):
+        if(you=="s"):
+            return True
+        else:
+            return False                      
+randomno=random.randint(1,3)
+if (randomno==1):
+    comp="s"
+elif (randomno==2):
+    comp="p"  
+else:
+    comp="sc" 
+     
+you=input("enter s for stone,pfor paper,sc for scissor ")
+print("option selected by computer is " + str(comp)) 
+print("option selected by you is "+ str(you))
+a=gamewin(comp,you)
+if(a):
+    print("you win")
+elif(a is False):
+    print("you loose")
+else:
+    print("draw game")             
